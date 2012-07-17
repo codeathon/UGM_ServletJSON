@@ -16,6 +16,7 @@ import com.google.gson.reflect.TypeToken;
 
 /**
  * Servlet implementation class for Servlet: InsertUserFromJson
+ * @author rohit
  */
 public class ModifyGroupFromJson extends javax.servlet.http.HttpServlet
 		implements javax.servlet.Servlet {

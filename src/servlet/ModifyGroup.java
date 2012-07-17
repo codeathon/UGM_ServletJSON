@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 /*
  * Servlet implementation class for Servlet: InsertUser
+ * @author rohit
  */
 public class ModifyGroup extends javax.servlet.http.HttpServlet implements
 		javax.servlet.Servlet {

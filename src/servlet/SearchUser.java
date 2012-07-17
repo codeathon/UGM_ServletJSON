@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 
 /**
  * Servlet implementation class for Servlet: SearchUser
- *
+ * @author rohit
  */
  public class SearchUser extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;

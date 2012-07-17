@@ -18,7 +18,7 @@ import com.google.gson.reflect.TypeToken;
 
 /**
  * Servlet implementation class for Servlet: LoginFromJson
- *
+ * @author rohit
  */
  public class LoginFromJson extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
    static final long serialVersionUID = 1L;
