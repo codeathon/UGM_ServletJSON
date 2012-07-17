@@ -39,7 +39,6 @@ import com.google.gson.Gson;
 		JSONClass jclass= new JSONClass();
 		
 		String userName = (String)request.getParameter("searchuserbyname");
-		System.out.print("In SearchUser Servlet"+userName);
 		FHuserClass fhuser = new FHuserClass();
 		fhuser.setUser_name(userName);
 		

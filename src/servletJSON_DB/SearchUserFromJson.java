@@ -38,7 +38,7 @@ import com.google.gson.reflect.TypeToken;
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String SQLstatement = "SELECT * FROM fhuser WHERE user_name LIKE  CONCAT('%', ? , '%') OR first_name LIKE  CONCAT('%', ? , '%') OR last_name LIKE  CONCAT('%', ? , '%')";
+		String SQLstatement = "SELECT * FROM fhuser WHERE email LIKE  CONCAT('%', ? , '%') OR first_name LIKE  CONCAT('%', ? , '%') OR last_name LIKE  CONCAT('%', ? , '%')";
 		String jdbcUsername = "root";
 		String jdbcPassword = "framehawk";
 		String jdbcURL = "jdbc:mysql://172.16.1.11:3306/launchpad";
@@ -53,15 +53,14 @@ import com.google.gson.reflect.TypeToken;
 			JSONMessage result = new Gson().fromJson(userNameJSON, type);
 			JSONClass jO = result.getMessagePayload();
 			
-			String userName = (String)jO.getFHUser().getUser_name();
-			System.out.print(userName);
+			String searchName = (String)jO.getFHUser().getUser_name();
 			Class.forName(driver).newInstance();
 			myConnection = DriverManager.getConnection(jdbcURL, jdbcUsername,
 					jdbcPassword);
 			myStatement = myConnection.prepareStatement(SQLstatement);
-			myStatement.setString(1, "%"+userName+"%");
-			myStatement.setString(2, "%"+userName+"%");
-			myStatement.setString(3, "%"+userName+"%");
+			myStatement.setString(1, "%"+searchName+"%");
+			myStatement.setString(2, "%"+searchName+"%");
+			myStatement.setString(3, "%"+searchName+"%");
 
 			ResultSet rs = myStatement.executeQuery();
 
@@ -74,10 +73,10 @@ import com.google.gson.reflect.TypeToken;
 				FHuserClass user = new FHuserClass();
 				user.setId(rs.getString("id"));
 				user.setFirst_name(rs.getString("first_name"));
+				user.setLast_name(rs.getString("last_name"));
 				user.setEmail(rs.getString("email"));
 				user.setPassword(rs.getString("password"));
 				user.setRole_id(1);
-				user.setLast_name(rs.getString("last_name"));
 				FHUserSearchList.add(user);
 			}
 			
