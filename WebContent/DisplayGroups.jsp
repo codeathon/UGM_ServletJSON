@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%@ page import="java.sql.*"%>
+<%@ page import="java.sql.*,com.fh.json.*,java.util.ArrayList,java.util.ListIterator"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,18 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/temp.css" />
 </head>
 <% 
-String SQLstatement = "SELECT * FROM fhgroup";
-String jdbcUsername = "root";
-String jdbcPassword = "framehawk";
-String jdbcURL = "jdbc:mysql://172.16.1.11:3306/launchpad";
-PreparedStatement myStatement;
-Connection myConnection = null;
-String driver = "com.mysql.jdbc.Driver";
-Class.forName(driver).newInstance();
-myConnection = DriverManager.getConnection(jdbcURL, jdbcUsername,
-		jdbcPassword);
-myStatement = myConnection.prepareStatement(SQLstatement);
-ResultSet rs = myStatement.executeQuery();
+ArrayList<FHGroupClass> FHGroupList = (ArrayList<FHGroupClass>)request.getAttribute("groupList");
 %>
 <body>
 <script type="text/javascript">  
@@ -35,29 +24,31 @@ ResultSet rs = myStatement.executeQuery();
             <h1>Launchpad Profile Manager</h1>
             <div id="logoutForm">
             	<span>You are logged in as </span>
-                <span class="loggedInUserName" >
+                <span class="loggedInUserName">
                 Flipteam</span>
                 <a href="/logout">Log Out</a>
              </div>
      	</div>
  	</div>
-  
     <div id="contentContainer">
          <div id="contentHeader" >
             <h1 >All Groups</h1>
             <a id="DisplayGroups_Add" class="normalButton absoluteTopRight" href="AddGroup.jsp">++ Add New</a>
             <a id="DisplayGroups_Back" class="normalButton absoluteTopLeft" href="DisplayGroups.jsp"> << Back </a>
          </div>
-         
          <div class="innerContent">
             <ul class="list" id="GroupList">
-            <% while (rs.next()) { %>
-				<li onclick="submitgroup('<%= rs.getString("group_name")%>');">
+	            <%
+				for (ListIterator<FHGroupClass> i = FHGroupList.listIterator(); i.hasNext();) {
+					FHGroupClass fhgroup = new FHGroupClass();
+					fhgroup = (FHGroupClass)i.next();
+				%>
+				<li onclick="submitgroup('<%= fhgroup.getGroup_name()%>');">
                 <div class="preview">
                 	<div class="color" style="background-color:#00316D"></div>
                	</div>
-                <span class="title" > <%= rs.getString("group_name")%> </span>
-                <p class="description" > <%= rs.getString("description") %></p>
+                <span class="title" > <%=fhgroup.getGroup_name()%> </span>
+                <p class="description" > <%= fhgroup.getDescription()%></p>
          	    <div class="hotspot"></div>
                    <a class="normalButton absoluteTopRight makeCopyButton"  href="profile/">+ Make Copy</a>
                    <a class="normalButton absoluteTopRight deleteButton" href="profile/">X</a>

@@ -34,7 +34,7 @@ import com.google.gson.reflect.TypeToken;
 		// TODO Auto-generated method stub
 		
 		HttpSession session = request.getSession(true);	
-		session.setAttribute("usernameSession",  (String)request.getAttribute("username"));
+		session.setAttribute("usernameSession",(String)request.getAttribute("username"));
 		
 		String loginResponse = (String)request.getAttribute("fidLoginResponse");
 		Type type = new TypeToken<JSONMessage>() {

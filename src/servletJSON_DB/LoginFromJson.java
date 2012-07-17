@@ -88,7 +88,6 @@ import com.google.gson.reflect.TypeToken;
 				request.getRequestDispatcher("LoginFinal").forward(request,
 						response);
 			} else {
-
 				uname=rs.getString("email");
 				request.setAttribute("username", uname);
 				

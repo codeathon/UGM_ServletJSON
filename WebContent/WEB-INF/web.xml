@@ -214,4 +214,34 @@
     <servlet-name>SearchUserFinal</servlet-name>
     <url-pattern>/SearchUserFinal</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchGroup</display-name>
+    <servlet-name>SearchGroup</servlet-name>
+    <servlet-class>servlet.SearchGroup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchGroup</servlet-name>
+    <url-pattern>/SearchGroup</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchGroupFinal</display-name>
+    <servlet-name>SearchGroupFinal</servlet-name>
+    <servlet-class>servlet.SearchGroupFinal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchGroupFinal</servlet-name>
+    <url-pattern>/SearchGroupFinal</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchGroupFromJson</display-name>
+    <servlet-name>SearchGroupFromJson</servlet-name>
+    <servlet-class>servletJSON_DB.SearchGroupFromJson</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchGroupFromJson</servlet-name>
+    <url-pattern>/SearchGroupFromJson</url-pattern>
+  </servlet-mapping>
 </web-app>
