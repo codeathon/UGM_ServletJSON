@@ -1,0 +1,195 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#header_border {
+	height:11%;
+	background-color:#3399CC;	
+}
+#header_container {
+	height:92%;
+	background-image: url("../images/HEADER_BG.png");
+	background-repeat: repeat;
+}
+#header_content {
+	margin-left:auto;
+	margin-right:auto;
+	width:1048px;
+}
+#fh_logo {
+	margin-top: 0.6%;	
+}
+#body_container{
+	margin-top:1%;
+	margin-bottom:1%;
+	height:74%;	
+	background:#cccccc;
+	padding-bottom: 1%;
+    padding-top: 1%;
+}
+#body_border {
+	height:98%;	
+	background-color:#3399CC;
+	margin-left:auto;
+	margin-right:auto;
+	width:1048px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;  
+	padding:0.5%;
+}
+#body_content {
+	height:100%;	
+	background-color:#403D3E;	
+	margin-left:auto;
+	margin-right:auto;
+	width:1048px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#footer_container{
+	height:7%;
+	background-color:#6699cc;
+}
+#footer_content {
+	margin-left:auto;
+	margin-right:auto;
+	width:1048px;	
+	padding-top:1%;
+	padding-left:1%;
+	color:#ffffff;
+}
+
+/*-----------------------------------------------------------------------
+						Styles for login form
+-------------------------------------------------------------------------*/
+
+#loginInnerContent {
+     left: 50%;
+     margin-left: -150px;
+     margin-top: -50px;
+     position: absolute;
+     top: 50%;
+     width: 300px;
+}
+
+#Username, #Password, #Fakepassword, #Privilege, #Groups {
+     -webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+	 border-radius: 10px;
+     height: 35px;
+     width: 100%;
+     valign:middle;
+     text-align:center;
+}
+.align_text { text-align:center; }
+#content_title{
+	padding:5%;
+	color: #FFFFFF;
+    font-size: 32px;
+}
+.Login_submit {
+     background: none repeat scroll 0% 0% #6699cc;
+     height:30px;
+     width:100px;
+     -webkit-border-radius: 7px;
+	 -moz-border-radius: 7px;
+	 border-radius: 7px;
+     border: 1px solid gray;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     font: 11px sans-serif;
+     padding: 0px 3px;
+     text-decoration: none;
+}
+
+.Login_submit:hover {
+     border: 1px solid #57409C;
+     color: #ADD8E6;
+     cursor: pointer;
+     text-decoration: none;
+}
+
+/*-----------------------------------------------------------------------
+					    Styles for add user form
+-------------------------------------------------------------------------*/
+#addUserInnerContent {   
+    width:100%;    
+}
+.form_left {
+    float:left;
+    margin-left: 5%;
+    overflow:hidden;
+}
+.form_right {   
+   	float:right;
+   	white-space:nowrap;
+   	margin-right: 10%;
+}
+#Retype_Password, #Retype_Fakepassword, #Email {
+     -webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+	 border-radius: 10px;
+     height: 35px;
+     width: 100%;
+     valign:middle;
+     text-align:center;
+}
+.add_user_submit, .add_user_img_upload, .add_user_back, .add_group_submit, .add_group_back {
+     background: none repeat scroll 0% 0% #6699cc;
+     height:30px;
+     width:100px;
+     -webkit-border-radius: 7px;
+	 -moz-border-radius: 7px;
+	 border-radius: 7px;
+     border: 1px solid gray;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     font: 11px sans-serif;
+     padding: 0px 3px;
+     text-decoration: none;
+}
+#add_user_submit {
+	margin-top: 27%;
+	margin-left: -26%;
+}
+#add_user_back {
+		
+}
+#avatar{	
+   margin-left: -27%;
+}
+/*-----------------------------------------------------------------------
+					    Styles for group form
+-------------------------------------------------------------------------*/
+#addGroupInnerContent {   
+    width:30%;    
+    padding-left: 5%;
+}
+.description, #Username {
+     -webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+	 border-radius: 10px;
+     height: 35px;
+     width: 100%;
+     valign:middle;
+     text-align:center;
+}
+#add_group_submit {
+	margin-left: 16%;
+}
+
+/*-----------------------------------------------------------------------
+					    Styles for dashboard
+-------------------------------------------------------------------------*/
+#dashboard_user{
+	margin-left: 25%;
+}
+#dashboard_group{
+	margin-left: 20%;
+}​

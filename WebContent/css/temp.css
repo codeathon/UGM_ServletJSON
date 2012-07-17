@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+		margin:0;
+		padding:0;
+		background-color:#BBC4E0;
+		position:relative;
+		font-family:Arial, Helvetica, sans-serif;
+	} 
+	
+	ul.list {
+		list-style:none;
+		margin:0;
+		padding:0;
+		overflow:visible;
+	}
+
+	ul.menu {
+		list-style:none;
+		margin:0;
+		padding:0;
+		overflow:visible;
+	}
+	
+	ul.menu li {
+		margin:0;
+		padding:0;
+		display:block;
+		float:left;
+		overflow:visible;
+	}
+
+    ul.menu li a {
+	   text-decoration:none;
+	   font-family:Arial, Helvetica, sans-serif;
+	   font-weight:bold;
+	   width:100%;
+	   display:block;
+	   float:left;
+	   padding-left:10px;
+	   padding-right:10px;
+   }
+
+	.normalButton {
+		background-color:#7B8FB8;
+		padding:0px;
+		padding-left:8px;
+		padding-right:8px;
+		color:#ffffff;
+		text-decoration:none;
+		cursor:pointer;
+		position:relative;
+	}
+	
+	.absoluteTopRight {
+		right:20px;
+		position:absolute !important;
+	}
+	
+	.absoluteTopLeft {
+		left:20px;
+		position:absolute !important;
+	}
+	
+	#banner {
+		width:100%;
+		height:70px;
+		background-color:#fff;
+		position:relative;
+	}
+	
+	#bannerContent {
+		position:relative;
+		margin-top:0px;
+		margin-left:auto;
+		margin-right:auto;
+		width:1048px;
+	}
+	
+	
+
+	#topLogo {
+		position:absolute;
+		width:177px;
+		height:61px;
+		left:0px;
+		top:4px;
+		background-image:url(../images/framehawkLogo.png);
+		background-repeat:no-repeat;
+	}
+	
+	#bannerContent h1 {
+		margin:0;
+		padding:0;
+		display:block;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-weight:normal;
+		font-size:28px;
+		width:100%;
+		line-height:50px;
+		height:50px;
+		text-align:center;
+		color:#00316D;
+		position:relative;
+		top:30px;
+	}
+	
+	
+	#logoutForm {
+		position:absolute;
+		top:6px;
+		right:6px;
+	}
+	
+
+	#logoutForm span {
+		color:#798DB8;
+		font-weight:normal;
+		font-size:14px;
+	}
+	
+	#logoutForm span.loggedInUserName {
+		color:#4C689A !important;
+		padding-right:10px;
+		border-right:1px solid #798DB8;
+	}
+	
+	#logoutForm a {
+		color:#4C689A;
+		font-weight:normal;
+		font-size:14px;
+		padding-left:10px;
+	}
+	
+	#contentContainer {
+		position:relative;
+		margin-top:0px;
+		margin-left:auto;
+		margin-right:auto;
+		width:1048px;
+		height:1000px;
+		margin-top:3px;
+		margin-bottom:39px;
+		background-color:#fff;
+	}
+	
+	#contentHeader {
+		position:relative;
+		width:100%;
+		height:50px;
+		line-height:30px;
+	}
+	
+	#contentHeader h1 {
+		margin:0;
+		padding:0;
+		display:block;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-weight:normal;
+		font-size:20px;
+		width:100%;
+		line-height:20px;
+		height:20px;
+		text-align:center;
+		color:#7A8EB8;
+		position:relative;
+		top:30px;
+	}
+	
+	#contentContainer .innerContent {
+		padding:20px;
+		padding-top:10px;
+	}
+	
+	#contentContainer .innerContent ul {
+		background-color:#fff;
+		border:1px solid #BEC7E3;
+		width:100%;
+		position:relative;
+	}
+	
+	#contentContainer .innerContent ul li {
+		background-color:#F6F8FA;
+		margin-top:2px;
+		margin-bottom:2px;
+		height:72px;
+		position:relative;
+	}
+	
+	#contentContainer .innerContent ul li.hovered {
+		background-color:#DFE5EE;
+	}
+	
+
+	#contentContainer .innerContent ul .normalButton {
+		display:none;
+	}
+
+	#contentContainer .innerContent ul .normalButton.makeCopyButton {
+		padding:6px; 
+		top:20px; 
+		right:40px;
+	}
+
+	#contentContainer .innerContent ul .normalButton.deleteButton {
+		padding:6px; 
+		top:20px; 
+		right:4px; 
+		width:20px; 
+		text-align:center; 
+		background-color:#A25627; 
+		font-weight:bold;
+	}
+	
+	#contentContainer .innerContent ul li.hovered .normalButton {
+		display:block !important;
+	}
+	
+	
+	#contentContainer .innerContent ul li .preview {
+		position:absolute;
+		top:6px;
+		left:4px;
+		width:84px;
+		height:63px;
+		background-image:url(../../images/iPadThumbBack.png);
+		background-repeat:no-repeat;
+	}
+	
+	#contentContainer .innerContent ul li .preview .color {
+		position:absolute;
+		left:11px;
+		top:8px;
+		width:61px;
+		height:46px;
+		background-color:#ff0000;
+	}
+	
+	#contentContainer .innerContent ul li span.title {
+		position:absolute;
+		color:#03326B;
+		font-size:20px;
+		top:6px;
+		left:100px;
+	}
+
+	#contentContainer .innerContent ul li p.description {
+		position:absolute;
+		color:#7A8EB8;
+		font-size:14px;
+		top:20px;
+		height:36px;
+		width:600px;
+		overflow:hidden;
+		left:100px;
+	}
+	
+	#contentContainer .innerContent ul li .hotspot {
+		background-image:url(../images/clearPixel.png);
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0px;
+		left:0px;
+		cursor:pointer;
+	}
+
+	
+	#footer {
+		width:100%;
+		height:41px;
+		position:fixed;
+		left:0px;
+		bottom:0px;
+		background-image:url(../../images/footerBack.png);
+		background-repeat:repeat-x;
+	}
+	
+	#footerContent {
+		position:relative;
+		margin-top:0px;
+		margin-left:auto;
+		margin-right:auto;
+		width:1048px;
+		height:100%;
+	}
+	
+	#footerContent ul.menu a {
+		position:relative;
+		top:14px;
+		font-size:14px;
+		color:#7A8EB8;
+		font-weight:normal;
+	   padding-left:20px;
+	   padding-right:20px;
+	}
