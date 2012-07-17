@@ -18,7 +18,7 @@
 <div id="topLogo"></div>
 <h1>Launchpad Profile Manager</h1>
 <div id="logoutForm"><span>You are logged in as </span> <span
-	class="loggedInUserName"> Flipteam </span> <a href="/logout">Log
+	class="loggedInUserName"> <%= request.getSession().getAttribute("usernameSession") %> </span> <a href="/logout">Log
 Out</a></div>
 </div>
 </div>

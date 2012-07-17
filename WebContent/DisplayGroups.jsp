@@ -25,7 +25,7 @@ ArrayList<FHGroupClass> FHGroupList = (ArrayList<FHGroupClass>)request.getAttrib
             <div id="logoutForm">
             	<span>You are logged in as </span>
                 <span class="loggedInUserName">
-                Flipteam</span>
+                <%= request.getSession().getAttribute("usernameSession") %></span>
                 <a href="/logout">Log Out</a>
              </div>
      	</div>
