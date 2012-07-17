@@ -48,7 +48,7 @@ public class InsertUserFromJson extends javax.servlet.http.HttpServlet
 
 		Connection myConnection = null;
 
-		String SQLstatement_user = "INSERT INTO fhuser(first_name,last_name, email,password,profile_image,role_id,user_name) VALUES (?,?,?,?,?,1,?)";
+		String SQLstatement_user = "INSERT INTO fhuser(first_name,last_name, email,password,profile_image,role_id) VALUES (?,?,?,?,?,1)";
 		String SQLstatement_group = "INSERT INTO user_in_group(fhuser_id,fhgroup_id) VALUES (?,?)";
 		String SQLstatement_newUserID = "SELECT id from fhuser WHERE email = ?";
 		String SQLstatement_groupID = "SELECT id FROM fhgroup WHERE group_name = ?";
@@ -79,7 +79,6 @@ public class InsertUserFromJson extends javax.servlet.http.HttpServlet
 			myStatement_user.setString(3, user_email);
 			myStatement_user.setString(4, user_password);
 			myStatement_user.setString(5, user_profile_image);
-			myStatement_user.setString(6, user_name);
 
 			int result_user = myStatement_user.executeUpdate();
 			if (result_user == 1) {

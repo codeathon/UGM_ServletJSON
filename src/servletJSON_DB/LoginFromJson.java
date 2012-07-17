@@ -89,7 +89,7 @@ import com.google.gson.reflect.TypeToken;
 						response);
 			} else {
 
-				uname=rs.getString("user_name");
+				uname=rs.getString("email");
 				request.setAttribute("username", uname);
 				
 				jclass.setSuccess(true);

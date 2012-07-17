@@ -40,7 +40,6 @@ public class InsertUser extends javax.servlet.http.HttpServlet implements
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 
-//		String user_name = request.getParameter("username");
 		String first_name = request.getParameter("firstname");
 		String last_name = request.getParameter("lastname");
 		String user_password = request.getParameter("password");
