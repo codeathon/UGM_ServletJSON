@@ -12,6 +12,8 @@ ArrayList<FHGroupClass> FHGroupList = (ArrayList<FHGroupClass>)request.getAttrib
 <body>
 <script type="text/javascript">  
     function submitgroup(obj){     
+//         val="DeleteGroup";
+//         location.href="DeleteGroup?action="+val+"&group_id="+obj;
         val="getGroup";
        location.href="DisplayGroups?action="+val+"&getgroupbyname="+obj;
     }  
@@ -44,6 +46,7 @@ ArrayList<FHGroupClass> FHGroupList = (ArrayList<FHGroupClass>)request.getAttrib
 					fhgroup = (FHGroupClass)i.next();
 				%>
 				<li onclick="submitgroup('<%= fhgroup.getGroup_name()%>');">
+<%-- 				<li onclick="submitgroup('<%= fhgroup.getId()%>');"> --%>
                 <div class="preview">
                 	<div class="color" style="background-color:#00316D"></div>
                	</div>

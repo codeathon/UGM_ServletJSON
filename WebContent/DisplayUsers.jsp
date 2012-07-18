@@ -9,7 +9,9 @@
 </head>
 <body>
 <script type="text/javascript">  
-    function submitname(obj){     
+    function submitname(obj){  
+//         val="deleteUser";
+//         location.href="DeleteUser?action="+val+"&user_id="+obj;
         val="getUser";
         location.href="DisplayUsers?action="+val+"&getuserbyid="+obj;
     }  

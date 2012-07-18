@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>UGM</display-name>
   <welcome-file-list>
-    <welcome-file>AddUser.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -243,5 +243,65 @@
   <servlet-mapping>
     <servlet-name>SearchGroupFromJson</servlet-name>
     <url-pattern>/SearchGroupFromJson</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteUser</display-name>
+    <servlet-name>DeleteUser</servlet-name>
+    <servlet-class>servlet.DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUser</servlet-name>
+    <url-pattern>/DeleteUser</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>DeleteUserFinal</display-name>
+    <servlet-name>DeleteUserFinal</servlet-name>
+    <servlet-class>servlet.DeleteUserFinal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUserFinal</servlet-name>
+    <url-pattern>/DeleteUserFinal</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+    <description></description>
+    <display-name>DeleteUserFromJson</display-name>
+    <servlet-name>DeleteUserFromJson</servlet-name>
+    <servlet-class>servletJSON_DB.DeleteUserFromJson</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUserFromJson</servlet-name>
+    <url-pattern>/DeleteUserFromJson</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+    <description></description>
+    <display-name>DeleteGroup</display-name>
+    <servlet-name>DeleteGroup</servlet-name>
+    <servlet-class>servlet.DeleteGroup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteGroup</servlet-name>
+    <url-pattern>/DeleteGroup</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+    <description></description>
+    <display-name>DeleteGroupFinal</display-name>
+    <servlet-name>DeleteGroupFinal</servlet-name>
+    <servlet-class>servlet.DeleteGroupFinal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteGroupFinal</servlet-name>
+    <url-pattern>/DeleteGroupFinal</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>DeleteGroupFromJson</display-name>
+    <servlet-name>DeleteGroupFromJson</servlet-name>
+    <servlet-class>servletJSON_DB.DeleteGroupFromJson</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteGroupFromJson</servlet-name>
+    <url-pattern>/DeleteGroupFromJson</url-pattern>
   </servlet-mapping>
 </web-app>
